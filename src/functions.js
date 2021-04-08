@@ -1,10 +1,10 @@
 function isBigger(a, b) {
   return a - b > 0;
-};
+}
 
 function isSmaller(a, b) {
   return !isBigger(a, b);
-};
+}
 
 function getMin(...numbers) {
   return numbers.reduce((min, current) => current < min ? current : min, numbers[0]);
@@ -12,7 +12,7 @@ function getMin(...numbers) {
 
 function makeNumber(string) {
   return string.replace(/\D/g, '');
-};
+}
 
 function countNumbers(string) {
   let stringNumbers = makeNumber(string);
@@ -28,7 +28,7 @@ function countNumbers(string) {
   }
 
   return obj;
-};
+}
 
 function pipe(number, ...functions) {
   for (let i = 0; i < functions.length; i++)
@@ -38,7 +38,7 @@ function pipe(number, ...functions) {
 }
 
 function isLeapYear(date) {
-  let dt;
+  let dt = new Date();
 
   if (typeof date === 'string') {
     if (isNaN(Date.parse(date)))
@@ -59,7 +59,7 @@ function isLeapYear(date) {
   return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)
     ? `${year} is a leap year`
     : `${year} is not a leap year`;
-};
+}
 
 
 module.exports = {
